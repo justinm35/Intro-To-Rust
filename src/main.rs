@@ -97,17 +97,56 @@ use std::cmp::Ordering;
 //         1..=18 => println!("Important Birthday"),
 //         21 | 50 => println!("Important Birthday"),
 //         64..=i32::MAX => println!("Important Birthday"),
-//         _ =>  println!("Not an important Birthday"),
+//         _ =>  println!("Not an important Birthday"), //Default Equivelant
 //     };
 // }
 
-fn main() {
-    let my_age = 18;
-    let voting_age = 18;
-    match my_age.cmp(&voting_age){
-        Ordering::Less => println!("Can't Vote"),
-        Ordering::Greater => println!("Can Vote"),
-        Ordering::Equal => println!("You gained the right to vote"),
-    };
+// fn main() {
+//     let my_age: i32 = 18;
+//     let voting_age: i32 = 18;
+//     match my_age.cmp(&voting_age){
+//         Ordering::Less  => println!("Can't Vote"),
+//         Ordering::Greater => println!("Can Vote"),
+//         Ordering::Equal => println!("You gained the right to vote"),
+//     };
     
+// }
+
+// fn main() {
+//     let arr_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//     println!("1st: {}", arr_1[0]);
+//     println!("length: {}", arr_1.len());
+// }
+
+// fn main() { //REG LOOP
+//     let arr_2 = [1,2,3,4,5,6,7,8,9];
+//     let mut loop_idx = 0;
+//     loop {
+//         if arr_2[loop_idx] % 2 == 0 {
+//             loop_idx +=1;
+//             continue;
+//         }
+//         if arr_2[loop_idx] == 9 {
+//             break;
+//         }
+//         println!("Val: {}", arr_2[loop_idx]);
+//         loop_idx +=1;
+//     }
+// }
+
+// fn main() { //WHILE LOOPS
+//     let arr_2 = [1,2,3,4,5,6,7,8,9];
+//     let mut loop_idx = 0;
+//     while loop_idx < arr_2.len(){
+//         println!("Arr: {}", arr_2[loop_idx]);
+//         loop_idx += 1;
+//     }
+// }
+
+fn main() { //FOR LOOPS
+    let arr_2: [i32; 9] = [1,2,3,4,5,6,7,8,9];
+    let mut loop_idx: i32 = 0;
+    for val  in arr_2.iter() {
+        println!("Val : {}", val);
+    }
 }
