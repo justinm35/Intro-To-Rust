@@ -1,6 +1,6 @@
 #![allow(unused)]
 
-use std::io;
+use std::io::{self, stdin};
 use rand::Rng;
 use std::io::{Write, BufReader, BufRead, ErrorKind};
 use std::fs::File;
@@ -170,12 +170,33 @@ use std::cmp::Ordering;
 //     println!("{}", st2);
 // }
 
+// fn main() {
+//   let st3 = String::from("x r t b h k k a m c");
+//   let mut v1: Vec<char> = st3.chars().collect();
+//   v1.sort();
+//   v1.dedup();
+//   for char in v1 {
+//     println!("{}", char);
+//   }
+//   let st4: &str = "Random string";
+//   let mut st5: String = st4.to_string();
+//   println!("{}", st5);
+//   let byte_arr1 = st5.as_bytes();
+//   let st6 = &st5[0..6];
+//   println!("String length: {}", st6.len());
+//   st5.clear();
+// }
+
 fn main() {
-    let mut user_input = String::new();
+    let mut grid: Vec<[&str; 3]> = vec![["   ", " x ", "   "], ["   ", " x ", "   "], ["   ", " x ", "   "]];
+    fn print_grid() {
+        for i in 0..3 {
+            println!("{}|{}|{}", grid[i][0], grid[i][1], grid[i][2]);
+            if(i != 2){
+                println!("-----------");
+            }
+        }
+    }
 
-    io::stdin().read_line(&mut user_input).expect("Try again.");
-
-    println!("You typed {user_input}");
-
-
+    stdin().read_line(buf)
 }
