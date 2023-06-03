@@ -1,6 +1,6 @@
 #![allow(unused)]
 
-use std::io::{self, stdin};
+use std::io;
 use rand::Rng;
 use std::io::{Write, BufReader, BufRead, ErrorKind};
 use std::fs::File;
@@ -159,53 +159,13 @@ use std::cmp::Ordering;
 //     println!("Age : {}", v1)
 // }
 
-// fn main() {
-//     let mut st1 = String::new();
-//     st1.push('A');
-//     st1.push_str(" word");
-//     for word in st1.split_whitespace(){
-//         println!("{}", word)
-//     }
-//     let st2 = st1.replace("A", "Another");
-//     println!("{}", st2);
-// }
-
-// fn main() {
-//   let st3 = String::from("x r t b h k k a m c");
-//   let mut v1: Vec<char> = st3.chars().collect();
-//   v1.sort();
-//   v1.dedup();
-//   for char in v1 {
-//     println!("{}", char);
-//   }
-//   let st4: &str = "Random string";
-//   let mut st5: String = st4.to_string();
-//   println!("{}", st5);
-//   let byte_arr1 = st5.as_bytes();
-//   let st6 = &st5[0..6];
-//   println!("String length: {}", st6.len());
-//   st5.clear();
-// }
-
 fn main() {
-    let mut grid: [[&str; 3]; 3] = [[" ", "x", " "], [" ", "x", " "], [" ", "o", " "]];
-    
-    let mut winner:char = ' ';
-
-    let mut user_input:&mut String = &mut String::new();
-    print!("Please pick a column then a row : ");
-    let _ = io::stdout().flush();
-    io::stdin().read_line(user_input);
-    let col :u32 = user_input.split(',')[0].parse();
-    let row :u32 = user_input.split(',')[0].parse();
-    println!("Column: {} & Row: {}",col, row );
-    print_grid(grid)
-}
-
-fn print_grid(grid : [[&str; 3]; 3]) {
-    println!("__1___2___3__");
-    for i in 0..3 {
-        println!("| {} | {} | {} |", grid[i][0], grid[i][1], grid[i][2]);
-            println!("-------------");
+    let mut st1 = String::new();
+    st1.push('A');
+    st1.push_str(" word");
+    for word in st1.split_whitespace(){
+        println!("{}", word)
     }
+    let st2 = st1.replace("A", "Another");
+    println!("{}", st2);
 }
