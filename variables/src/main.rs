@@ -62,7 +62,7 @@ fn main() {
 
     let my_string_lit = "Hey Justin!";
 
-    let word2 = first_word(my_string_lit);
+    let word2 = first_word(&my_string_lit);
     println!("The word2 is : {}", word2)
 
 }
