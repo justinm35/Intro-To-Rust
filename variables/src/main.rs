@@ -64,5 +64,5 @@ fn main() {
 
     let word2 = first_word(&my_string_lit);
     println!("The word2 is : {}", word2)
-
+    
 }
